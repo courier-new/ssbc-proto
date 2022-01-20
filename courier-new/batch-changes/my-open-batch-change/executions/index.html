@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch Changes</title>
+</head>
+<link rel="stylesheet" href="/index.css">
+<script type="text/javascript" src="/index.js"></script>
+<style>
+  table#executions th {
+    border-bottom: 1px solid #ddd;
+    padding: 3px 12px;
+  }
+
+  table#executions td {
+    height: 70px;
+    border: 2px solid #fff;
+    padding: 0 12px;
+  }
+
+  table#executions tr td:first-child, table#executions tr th:first-child {
+    text-align: center !important;
+  }
+
+  table#executions tr:nth-child(odd) td {
+    background-color: #f9f9f9;
+  }
+
+  table#executions tr td:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<body>
+  <h1><a href="/courier-new/batch-changes">courier-new</a> / my-open-batch-change <span class="label open">Open</span></h1>
+  <p class="created-at">Created 1 month ago by courier-new.</p>
+  <p class="description">This batch changes makes a super critical change and it's super cool wow check it out.</p>
+  <table id="steps">
+    <tr>
+      <th><a href="/courier-new/batch-changes/my-open-batch-change/executions/id0001/spec">1. Batch spec</a></th>
+      <th><a href="/courier-new/batch-changes/my-open-batch-change/executions/id0001/">2. Execution</a> <span class="status success"></span></th>
+      <th style="color: #bbb; cursor: not-allowed">3. Preview</th>
+      <th><a href="/courier-new/batch-changes/my-open-batch-change">4. Changesets</a></th>
+      <th>
+        <select id="more" name="more" onchange="handleMoreSelect(this)">
+          <option disabled selected>More...</option>
+          <option value="burndown">Burndown chart</option>
+          <option value="executions">All executions</option>
+          <option value="bulk-actions">Bulk actions</option>
+        </select>
+      </th>
+    </tr>
+  </table>
+  <h3>Executions</h3>
+  <table id="executions" style="width: 100%">
+    <tr>
+      <th>State</th>
+      <th style="width: 70%">Batch spec</th>
+      <th>Execution time</th>
+    </tr>
+    <!-- <tr>
+      <td><span class="status large executing"></span>Executing</td>
+      <td>Executed by courier-new about 12 minutes ago</td>
+      <td>00:12:15</td>
+    </tr> -->
+    <tr>
+      <td><span class="status large success"></span>Complete</td>
+      <td>⭐ <a href="/courier-new/batch-changes/my-open-batch-change/executions/id0001">Executed by courier-new about 37 minutes ago</a></td>
+      <td>00:14:44</td>
+    </tr>
+    <tr>
+      <td><span class="status large success"></span>Complete</td>
+      <td><a href="/courier-new/batch-changes/my-open-batch-change/executions/id0002">Executed by courier-new about 2 hours ago</a></td>
+      <td>00:15:01</td>
+    </tr>
+    <tr>
+      <td><span class="status large fail"></span>Error</td>
+      <td><a href="/courier-new/batch-changes/my-open-batch-change/executions/id0003">Executed by courier-new about 2 hours ago</a></td>
+      <td>00:17:50</td>
+    </tr>
+  </table>
+</body>
+</html>

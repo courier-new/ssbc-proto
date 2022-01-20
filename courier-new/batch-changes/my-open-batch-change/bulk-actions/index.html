@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch Changes</title>
+</head>
+<link rel="stylesheet" href="/index.css">
+<script type="text/javascript" src="/index.js"></script>
+<body>
+  <h1><a href="/courier-new/batch-changes">courier-new</a> / my-open-batch-change <span class="label open">Open</span></h1>
+  <p class="created-at">Created 1 month ago by courier-new.</p>
+  <p class="description">This batch changes makes a super critical change and it's super cool wow check it out.</p>
+  <table id="steps">
+    <tr>
+      <th><a href="/courier-new/batch-changes/my-open-batch-change/executions/id0001/spec">1. Batch spec</a></th>
+      <th><a href="/courier-new/batch-changes/my-open-batch-change/executions/id0001/">2. Execution</a> <span class="status success"></span></th>
+      <th style="color: #bbb; cursor: not-allowed">3. Preview</th>
+      <th><a href="/courier-new/batch-changes/my-open-batch-change">4. Changesets</a></th>
+      <th>
+        <select id="more" name="more" onchange="handleMoreSelect(this)">
+          <option disabled selected>More...</option>
+          <option value="burndown">Burndown chart</option>
+          <option value="executions">All executions</option>
+          <option value="bulk-actions">Bulk actions</option>
+        </select>
+      </th>
+    </tr>
+  </table>
+  <h3>Bulk actions</h3>
+  <div style="height: 700px; background: #f2f2f2; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;"><p>I show the list of bulk actions that have run.</p></div>
+</body>
+</html>

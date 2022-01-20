@@ -1,0 +1,160 @@
+body {
+  width: 66%;
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  margin-bottom: 5px;
+}
+
+th,
+td {
+  padding: 0px 5px 0px 0px;
+  text-align: left;
+}
+
+a,
+a:visited {
+  color: #2771db;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1f58ae;
+}
+
+button {
+  cursor: pointer;
+  min-width: 70px;
+  padding: 0 10px;
+  background-color: #276fdb;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  height: 30px;
+  margin: 3px;
+}
+
+button:hover {
+  background-color: #1f58ae;
+}
+
+.label {
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 3px 5px;
+}
+
+span.status {
+  display: inline-block;
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+}
+
+span.status.large {
+  margin: 3px auto;
+  border-radius: 12px;
+  height: 24px;
+  width: 24px;
+}
+
+.label.draft,
+button.secondary,
+span.status.draft {
+  color: #000;
+  background-color: #ddd;
+}
+
+button.secondary:hover {
+  background-color: #bbb;
+}
+
+.label.executing,
+span.status.executing {
+  background-color: #f59f00;
+}
+
+.label.open,
+span.status.success {
+  color: #fff;
+  background-color: #37b24d;
+}
+
+:not(.label).open {
+  color: #37b24d;
+}
+
+.label.closed,
+.label.error,
+button.alert,
+span.status.fail {
+  color: #fff;
+  background-color: #c92a2a;
+}
+
+button.alert:hover {
+  background-color: #992020;
+}
+
+:not(.label).closed,
+:not(.label).error {
+  color: #c92a2a;
+}
+
+.label.ready,
+span.status.ready {
+  color: #fff;
+  background-color: #276fdb;
+}
+
+input,
+select {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  height: 30px;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+p.created-at {
+  font-size: 0.8em;
+  margin: 5px 0 20px 0;
+}
+
+p.description {
+  margin-bottom: 30px;
+}
+
+table#steps {
+  border-bottom: 1px solid #ddd;
+}
+
+table#steps th,
+table#steps td {
+  padding-right: 15px;
+}
+
+table#kpis th,
+table#kpis td {
+  text-align: center;
+}
+
+.banner {
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  font-size: 0.8em;
+  padding: 8px;
+  margin: 15px 0;
+}

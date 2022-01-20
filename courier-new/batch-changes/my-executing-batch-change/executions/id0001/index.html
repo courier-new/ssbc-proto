@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch Changes</title>
+</head>
+<link rel="stylesheet" href="/index.css">
+<script type="text/javascript" src="/index.js"></script>
+
+<body>
+  <h1><a href="/courier-new/batch-changes">courier-new</a> / my-executing-batch-change <span class="label draft">Draft</span></h1>
+  <p class="created-at">Created 1 month ago by courier-new.</p>
+  <div style="float: right; display: flex; align-items: center;">
+    <button onclick="location.href = '/courier-new/batch-changes/my-stopped-batch-change/executions/id0001'">Cancel</button>
+  </div>
+  <p class="description">This batch changes makes a super critical change and it's super cool wow check it out.</p>
+  <div style="float: right; display: flex; align-items: center;">
+    <table id="kpis">
+      <tr><td>00:10:36</td><td>0</td><td>21</td><td>32</td><td>7</td><td>0</td></tr>
+      <tr><td>Total time</td><td>Errors</td><td>Complete</td><td>Working</td><td>Queued</td><td>Ignored</td></tr>
+    </table>
+  </div>
+  <table id="steps">
+    <tr>
+      <th><a href="/courier-new/batch-changes/my-executing-batch-change/executions/id0001/spec">1. Batch spec</a></th>
+      <th><u><strong>2. Execution</u></strong> <span class="status executing"></span></th>
+      <th style="color: #bbb; cursor: not-allowed">3. Preview</th>
+      <th style="color: #bbb; cursor: not-allowed">4. Changesets</th>
+    </tr>
+  </table>
+
+  <div style="height: 800px; background: #f2f2f2; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;"><p>I'm the execution section!</p><p>I show all the workspace progress for the current/latest execution.</p><p>The "Cancel" button turns into "Preview" once the execution finishes.</p><p><a href="/courier-new/batch-changes/my-preview-batch-change/executions/id0001/preview">Pretend like it finished and go to preview.</a></p></div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch Changes</title>
+</head>
+<link rel="stylesheet" href="/index.css">
+<script type="text/javascript" src="/index.js"></script>
+
+<body>
+  <h1><a href="/courier-new/batch-changes">courier-new</a> / my-open-and-executing-batch-change <span class="label open">Open</span></h1>
+  <p class="created-at">Created 1 month ago by courier-new.</p>
+  <div style="float: right">
+    <button class="secondary" onclick="location.href = '/courier-new/batch-changes/my-open-batch-change/settings';">Settings</button>
+    <button class="alert" onclick="location.href = '/courier-new/batch-changes/my-open-batch-change/close';">Close</button>
+  </div>
+  <p class="description">This batch changes makes a super critical change and it's super cool wow check it out.</p>
+  <table id="steps">
+    <tr>
+      <th><a href="/courier-new/batch-changes/my-open-and-executing-batch-change/executions/id0002/spec">1. Batch spec</a></th>
+      <th><a href="/courier-new/batch-changes/my-open-and-executing-batch-change/executions/id0002">2. Execution</a> <span class="status executing"></span></th>
+      <th style="color: #bbb; cursor: not-allowed">3. Preview</th>
+      <th><u><strong>4. Changesets</u></strong></th>
+      <th>
+        <select id="more" name="more" onchange="handleMoreSelect(this)">
+          <option disabled selected>More...</option>
+          <option value="burndown">Burndown chart</option>
+          <option value="executions">All executions</option>
+          <option value="bulk-actions">Bulk actions</option>
+        </select>
+      </th>
+    </tr>
+  </table>
+
+  <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 15px;">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <h3 style="margin: 10px 0">☑️ 10% complete&nbsp;&nbsp;</h3>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <div><small class="open">+310</small> <small class="closed">-212</small></div>
+          <small style="font-size: 0.5em">🟩 🟩 🟩 🟥 🟥</small>
+        </div>
+      </div>
+      <small><a href="/courier-new/batch-changes/my-open-batch-change/burndown" style="font-style: italic;">See burndown chart</a></small>
+    </div>
+    <table id="kpis">
+      <tr><td>60</td><td>🔳</td><td>📝</td><td>👀</td><td>🚫</td><td>✅</td><td>🗄️</td></tr>
+      <tr><td>Changesets</td><td>0 Unpublished</td><td>0 Draft</td><td>54 Open</td><td>1 Closed</td><td>5 Merged</td><td>0 Archived</td></tr>
+    </table>
+  </div>
+
+  <div style="display: flex; align-items: center;">
+    <input placeholder="Search title and repository name" style="flex: 1; margin-right: 5px;" />
+    <select name="status" style="margin-right: 5px;">
+      <option disabled selected>Status</option>
+      <option>Unpublished</option>
+      <option>Failed</option>
+      <option>Retrying</option>
+      <option>Scheduled</option>
+      <option>Processing</option>
+      <option>Open</option>
+      <option>Draft</option>
+      <option>Closed</option>
+      <option>Merged</option>
+      <option>Deleted</option>
+    </select>
+    <select name="check state" style="margin-right: 5px;">
+      <option disabled selected>Check state</option>
+      <option>Pending</option>
+      <option>Passed</option>
+      <option>Failed</option>
+    </select>
+    <select name="review state">
+      <option disabled selected>Review state</option>
+      <option>Approved</option>
+      <option>Changes requested</option>
+      <option>Pending</option>
+      <option>Commented</option>
+      <option>Dismissed</option>
+    </select>
+    <input type="checkbox" name="archived" value="archived">
+    <label for="archived"> Archived</label><br>
+  </div>
+  <div style="height: 700px; background: #f2f2f2; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;"><p>I show the filtered list of changesets.</p></div>
+</body>
+</html>

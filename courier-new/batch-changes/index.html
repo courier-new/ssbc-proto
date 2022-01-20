@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch Changes</title>
+</head>
+<link rel="stylesheet" href="/index.css">
+<script type="text/javascript" src="/index.js"></script>
+<style>
+  h1 {
+    margin-bottom: 15px;
+  }
+
+  th {
+    border-bottom: 1px solid #ddd;
+    padding: 3px 12px;
+  }
+
+  td {
+    border: 2px solid #fff;
+    padding: 3px 12px;
+  }
+
+  tr td:first-child, tr th:first-child {
+    text-align: center !important;
+  }
+
+  tr:nth-child(odd) td {
+    background-color: #f9f9f9;
+  }
+</style>
+
+<body>
+  <div style="float: right"><button onclick="location.href = '/courier-new/batch-changes/create';">Create</button></div>
+  <h1>Batch Changes</h1>
+  <table width="100%">
+    <tr>
+      <th width="10%">Status</th>
+      <th width="90%">Details</th>
+    </tr>
+    <tr>
+      <td><span class="label draft">Draft</span></td>
+      <td><a href="/courier-new/batch-changes/my-draft-batch-change/edit"><h3>courier-new/my-draft-batch-change</h3></a><p>I'm just a draft batch spec.</p></td>
+    </tr>
+    <tr>
+      <td><span class="label draft">Draft</span> <span class="label executing">O</span></td>
+      <td><a href="/courier-new/batch-changes/my-executing-batch-change/executions/id0001"><h3>courier-new/my-executing-batch-change</h3></a><p>I am actively executing a batch spec, but I haven't had any spec applied before.</p></td>
+    </tr>
+    <tr>
+      <td><span class="label draft">Draft</span> <span class="label error">O</span></td>
+      <td><a href="/courier-new/batch-changes/my-stopped-batch-change/executions/id0001"><h3>courier-new/my-stopped-batch-change</h3></a><p>I had a problem executing or was cancelled, and I've never had any spec applied before.</p></td>
+    </tr>
+    <tr>
+      <td><span class="label draft">Draft</span> <span class="label ready">O</span></td>
+      <td><a href="/courier-new/batch-changes/my-preview-batch-change/executions/id0001/preview"><h3>courier-new/my-preview-batch-change</h3></a><p>I finished executing and have a preview ready, but I haven't had any batch spec applied before.</p></td>
+    </tr>
+    <tr>
+      <td><span class="label open">Open</span></td>
+      <td><a href="/courier-new/batch-changes/my-open-batch-change"><h3>courier-new/my-open-batch-change</h3></a><p>The latest execution on this batch change was applied, and there are no ongoing executions.</p></td>
+    </tr>
+    <tr>
+      <td><span class="label open">Open</span> <span class="label draft">O</span></td>
+      <td><a href="/courier-new/batch-changes/my-open-and-draft-batch-change"><h3>courier-new/my-open-and-draft-batch-change</h3></a><p>The latest execution on this batch change was applied, but there is a newer batch spec that has not been executed yet.</p></td>
+    </tr>
+    <tr>
+      <td><span class="label open">Open</span> <span class="label executing">O</span></td>
+      <td><a href="/courier-new/batch-changes/my-open-and-executing-batch-change/executions/id0002"><h3>courier-new/my-open-and-executing-batch-change</h3></a><p>I have had a batch spec applied, and I am actively executing a new one.</p></td>
+    </tr>
+    <tr>
+      <td><span class="label open">Open</span> <span class="label error">O</span></td>
+      <td><a href="/courier-new/batch-changes/my-open-and-executing-batch-change/executions/id0002"><h3>courier-new/my-open-and-executing-batch-change</h3></a><p>I have had a batch spec applied, but my latest execution had a problem.</p></td>
+    </tr>
+    <tr>
+      <td><span class="label open">Open</span> <span class="label ready">O</span></td>
+      <td><a href="/courier-new/batch-changes/my-open-and-preview-batch-change/executions/id0002/preview"><h3>courier-new/my-open-and-preview-batch-change</h3></a><p>I have had a batch spec applied, but I have a new one that's ready to preview that hasn't been applied yet.</p></td>
+    </tr>
+    <tr>
+      <td><span class="label closed">Closed</span></td>
+      <td><a href="/courier-new/batch-changes/my-closed-batch-change"><h3>courier-new/my-closed-batch-change</h3></a><p>I'm a batch change that has been closed.</p></td>
+    </tr>
+  </table>
+</body>
+</html>

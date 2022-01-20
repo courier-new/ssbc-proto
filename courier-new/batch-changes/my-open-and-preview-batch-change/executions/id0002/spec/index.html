@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch Changes</title>
+</head>
+<link rel="stylesheet" href="/index.css">
+<script type="text/javascript" src="/index.js"></script>
+
+<body>
+  <h1><a href="/courier-new/batch-changes">courier-new</a> / my-open-and-preview-batch-change <span class="label open">Open</span></h1>
+  <p class="created-at">Created 1 month ago by courier-new.</p>
+  <div style="float: right; display: flex; align-items: center;">
+    <button onclick="location.href = '/courier-new/batch-changes/my-open-and-draft-batch-change/edit';">Edit</button>
+  </div>
+  <p class="description">This batch changes makes a super critical change and it's super cool wow check it out.</p>
+  <div style="float: right; display: flex; align-items: center;">
+    <table id="kpis">
+      <tr><td>00:14:01</td><td>0</td><td>60</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>Total time</td><td>Errors</td><td>Complete</td><td>Working</td><td>Queued</td><td>Ignored</td></tr>
+    </table>
+  </div>
+  <table id="steps">
+    <tr>
+      <th><strong><u>1. Batch spec</u></strong></th>
+      <th><a href="/courier-new/batch-changes/my-open-and-preview-batch-change/executions/id0002/">2. Execution</a> <span class="status success"></span></th>
+      <th><a href="/courier-new/batch-changes/my-open-and-preview-batch-change/executions/id0002/preview">3. Preview</a></th>
+      <th><a href="/courier-new/batch-changes/my-open-and-preview-batch-change">4. Changesets</a></th>
+      <th>
+        <select id="more" name="more" onchange="handleMoreSelect(this)">
+          <option disabled selected>More...</option>
+          <option value="burndown">Burndown chart</option>
+          <option value="executions">All executions</option>
+          <option value="bulk-actions">Bulk actions</option>
+        </select>
+      </th>
+    </tr>
+  </table>
+
+  <div style="height: 800px; background: #f2f2f2; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;"><p>I'm the SSBC editor section!</p><p>I show the batch spec that was executed to produce the current preview.</p><p>I'm <strong>not</strong> editable on this page, until you click "Edit".</p></div>
+</body>
+</html>

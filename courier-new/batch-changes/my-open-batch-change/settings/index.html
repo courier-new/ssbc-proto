@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch Changes</title>
+</head>
+<link rel="stylesheet" href="/index.css">
+<script type="text/javascript" src="/index.js"></script>
+<body>
+  <h1><a href="/courier-new/batch-changes">courier-new</a> / my-open-batch-change <span class="label open">Open</span></h1>
+  <p class="created-at">Created 1 month ago by courier-new.</p>
+  <p class="description">This batch changes makes a super critical change and it's super cool wow check it out.</p>
+  <h3>Settings</h3>
+  <form>
+    <h4>Namespace</h4>
+    <select name="namespace" style="margin-right: 5px;">
+      <option selected>courier-new</option>
+      <option>my-org-1</option>
+      <option>my-org-2</option>
+    </select>
+    <h4>Batch change name</h4>
+    <input style="width: 300px;" value="my-open-batch-change" />
+    <p><small><em>Changing the batch change name may require re-executing the batch spec if the name is used as a templating variable.</em></small></p>
+  </form>
+  <br />
+  <div style="float: right;">
+    <button class="secondary" onclick="location.href = '/courier-new/batch-changes/my-open-batch-change'">Cancel</button>
+    <button onclick="location.href = '/courier-new/batch-changes/my-open-batch-change'">Save</button>
+  </div>
+</body>
+</html>
