@@ -12,6 +12,9 @@
 <body>
   <h1><a href="/courier-new/batch-changes">courier-new</a> / my-open-batch-change <span class="label open">Open</span></h1>
   <p class="created-at">Created 1 month ago by courier-new.</p>
+  <div style="float: right; display: flex; align-items: center;">
+    <button onclick="location.href = '/courier-new/batch-changes/my-open-and-draft-batch-change/edit';">Edit</button>
+  </div>
   <p class="description">This batch changes makes a super critical change and it's super cool wow check it out.</p>
   <table id="steps">
     <tr>
@@ -32,6 +35,6 @@
 
   <div class="banner">You're viewing an older batch spec. <a href="/courier-new/batch-changes/my-open-batch-change/executions/id0001/spec">Jump back to the latest</a>, or <a href="/courier-new/batch-changes/my-open-batch-change/executions">view all executions</a>.</div>
 
-  <div style="height: 800px; background: #f2f2f2; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;"><p>I'm the SSBC editor section!</p><p>I show the batch spec that was previously applied to this batch change.</p><p>I'm <strong>not</strong> editable on this page.</p></div>
+  <div style="height: 800px; background: #f2f2f2; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;"><p>I'm the SSBC editor section!</p><p>I show the batch spec that was previously applied to this batch change.</p><p>I'm <strong>not</strong> editable on this page, until you click "Edit".</p><p>When you click "Edit", you are taken to `/edit` but this spec will be pre-filled instead of the latest one.</p></div>
 </body>
 </html>
